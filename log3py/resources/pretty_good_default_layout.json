@@ -1,0 +1,37 @@
+{
+    "@timestamp": {
+      "$resolver": "timestamp",
+      "format": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+    },
+    "job.type": "just-some-logger",
+    "trace": {
+      "$resolver": "mdc"
+    },
+    "log.name": {
+      "$resolver": "logger",
+      "field": "name"
+    },
+    "log.level": {
+      "$resolver": "logger",
+      "field": "levelName"
+    },
+    "message": {
+      "$resolver": "message",
+      "stringified": false
+    },
+    "error.type": {
+      "$resolver": "exception",
+      "field": "className"
+    },
+    "error.message": {
+      "$resolver": "exception",
+      "field": "message"
+    },
+    "error.stack_trace": {
+      "$resolver": "exception",
+      "field": "stackTrace",
+      "stackTrace": {
+        "stringified": false
+      }
+    }
+  }

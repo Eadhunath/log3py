@@ -1,0 +1,38 @@
+[project]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Eadhunath/log3py"
+Issues = "https://github.com/Eadhunath/log3py/issues"
+
+[tool.poetry]
+name = "log3py"
+version = "0.1.1"
+description = "Structured Logger for Python3"
+authors = ["Eadhunath"]
+readme = "README.md"
+packages = [{include = "log3py"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+isort = "^5.12.0"
+
+[tool.black]
+line-length = 80
+
+[tool.isort]
+profile = "black"
+skip_gitignore = true
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
